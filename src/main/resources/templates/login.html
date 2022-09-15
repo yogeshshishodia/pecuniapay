@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- we use *  to POST data and  $ to GET data i.e. *{varName} & i${varName}  -->
+	<form action="#" th:action="@{/loginfo}" th:object="${bankAccount}"
+		method="post">
+
+		<p>
+			BankAccountNumber: <input type="text" th:field="*{accountNo}" />
+		</p>
+		<p>
+			BankAccountName: <input type="text" th:field="*{bankName}" />
+		</p>
+		<p>
+			<input type="submit" value="Submit" />
+		</p>
+	</form>
+</body>
+</html>
